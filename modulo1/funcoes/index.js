@@ -126,3 +126,9 @@
         
 //         console.log(divisão(numero1,numero2)) 
     
+
+
+base = input('informe a base')
+altura = input('informe a altura')
+area = base * altura / 2.0
+print = 'Area', area
