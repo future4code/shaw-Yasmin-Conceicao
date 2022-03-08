@@ -36,7 +36,6 @@ function retornaNumerosPares(array) {
 
 }
 
-
 retornaNumerosPares(5)
 
 // EXERCÍCIO 05
@@ -191,3 +190,7 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 function retornaArrayOrdenadoPorData(consultas) {
 
 }
+
+
+
+
