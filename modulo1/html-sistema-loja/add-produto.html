@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
-        <p>Conc company</p>
+        <p class="algo">Conc company</p>
     </div>
     
     <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
+        <a class="muda" href="index.html">Página Inicial</a>
+        <a class="muda" href="ctrl-estoque.html">Controle de Estoque</a>
+        <a class="muda" href="add-produto.html">Adicionar Produto</a>
+        <a class="muda" href="funcionarios.html">Funcionários</a>
     </div>
 
     
-    <h2>Adicionar Produto</h2>
+    <h2 class="algo">Adicionar Produto</h2>
     <form action="">
         <div>
             <label for="link-foto">Link para foto: </label>
@@ -27,13 +28,13 @@
         </div>
         
         <div>
-            <label for="descricao">Descrição do produto: </label>
+            <label  for="descricao">Descrição do produto: </label>
             <!-- Adicione o id apropriado para o input abaixo -->
             <input type="text" id="nome" name="descrição">
         </div>
         
         <div>
-            <label for="preco">Preço (em R$): </label>
+            <label  class="novo" for="preco">Preço (em R$): </label>
             <!-- Adicione o id apropriado e o type para receber números abaixo -->
             <input type="number" id="valor" name="preço">
         </div>
@@ -44,7 +45,7 @@
             <input type="number" id="valor" name="disponibilidade">
         </div>
 
-        <div class="form-add">
+        <div>
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
             <button type="submit">Adicionar</button>
         </div>
