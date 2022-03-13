@@ -163,13 +163,90 @@ button:active
 	position: relative;
 	justify-content: space-evenly;
 	align-items: center;
+	font-size: 30px;
+	
+	
+}
+
+
+.box-hab{
+
+	width: 50%;
+	height:420px;
+	background-color: #ffffff;
+	border-radius: 0px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+	display: flex column;
+	margin: 5% auto 20px auto;
+	position:relative;
+	justify-content:center;
+	align-items:flex-start;
+	text-align:center ;
+	border-radius: 20px;
+	padding-top: 40px;
+	background-image:-moz-linear-gradient(rosajpg);
+
+}
+
+.box-hab h1{
+
+	color: rgb(212, 32, 92);
+	
+}
+
+
+
+.contato2{
+
+	width: 50%;
+	height:430px;
+	background-color: #ffffff;
+	border-radius: 0px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+	display: flex column;
+	margin: 5% auto 20px auto;
+	position:relative;
+	justify-content:center;
+	align-items:flex-start;
+	text-align:center ;
+	border-radius: 10px;
+	padding-top: 10px;
+	
+}
+
+.contato2 li{
+
+	color: palevioletred
+	
+} 
+
+
+
+
+.mudaimagem{
+	width: 60px;
+	height: 50px;
+
+}
+
+ #valor{
+
+ margin-top: 10%;
+ font-size: 25px;
+
+ }
+
+#novovalor{
+
+	font-size: 50px;
 	
 }
 
 /* Estilo Imagem Sobre eu */
 .conteudo-sobre img
 {
-	height: 250px;
+	height: 130px;
+	
   
 }
 
@@ -217,12 +294,14 @@ button:active
 }
 
 
-/* Seção de Serviços  */
+/* instituições  */
 
 .servicos
 {
 	height: 600px;
+	
 	background-color: #ffffff;
+	
 
 }
 
@@ -230,9 +309,10 @@ button:active
 {
 	font-family: calibri;
 	font-weight: bold;
-	color: #3e3d3d;
+	color:#000;
 	font-size:30px;
 	line-height: 0px;
+	
 
 }
 
@@ -240,16 +320,17 @@ button:active
 {
 	font-family: calibri;
 	font-weight: bold;
-	color: #3e3d3d;
+	color: black;
 	font-size:15px;
 	line-height: 5px;
-
+    
 }
 
 .servicos-textos p:nth-child(3)
 {
 	font-family: calibri;
-	color: #7e7d7d;
+	color: black;
+	
 	
 }
 
@@ -271,6 +352,8 @@ button:active
 	justify-content: center;
 	align-items:  center;
 	flex-direction: column;
+	border-radius: 10px;
+	
 
 }
 
@@ -366,7 +449,7 @@ button:active
 
 
 
-/* Seção fale comigo */
+/* habilidades */
 
 .contato
 {
@@ -379,6 +462,7 @@ button:active
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	
 }
 
 .contato p
@@ -387,7 +471,7 @@ button:active
 	font-size: 30px;
 	font-family: calibri;
 	font-weight: bold;
-	border-bottom: 2px solid #ffffff;
+
 }
 
 .contato button
@@ -399,7 +483,11 @@ button:active
 	border:none;
 	font-size: 14px;
 	font-weight: bold;
+	
 }
+
+
+
 
 /* Seção footer */
 
@@ -432,6 +520,7 @@ footer p:nth-child(2)
 	color: #7e7d7d;
 	width: 500px;
 	text-align: center;
+	
 }
 
 .copy
