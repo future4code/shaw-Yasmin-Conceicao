@@ -14,6 +14,7 @@ const PostContainer = styled.div`
   margin-bottom: 10px;
 `
 
+
 const PostHeader = styled.div`
   height: 40px;
   display: flex;
