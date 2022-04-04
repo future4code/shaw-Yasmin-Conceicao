@@ -1,0 +1,73 @@
+ .algo-segundo{
+    color: palevioletred;
+    ;
+} 
+
+ .muda-cor{
+    color:palevioletred;
+}
+.quadro{
+    display: inline;
+    width: 50px;
+    border: 2px ;
+    margin: 5px;
+    
+} 
+
+#velho{
+    border: 3px solid blanchedalmond;
+}
+
+.cor{
+   color: palevioletred;
+
+} 
+
+.quadro2{
+    margin: 5px
+}
+
+.trocaimagem{
+    margin: 50px 10px;
+    border: 3px solid peachpuff ;
+}
+
+.mudar{
+    margin: 40px;
+}
+
+.algo{
+    color: palevioletred;
+    
+    
+}
+
+.mudando{
+    color: palevioletred;
+    
+}
+
+#largura{
+    padding: 10px;
+    color:blueviolet;
+}
+
+.muda{
+    margin: 30px;
+    color: blueviolet;
+}
+
+div{
+    margin: 20px;
+    color: blueviolet;
+}
+
+.troca{
+    padding: 20px ;
+    color: blueviolet;
+}
+
+#rosa{
+    padding: 40px;
+    color: palevioletred;
+}
