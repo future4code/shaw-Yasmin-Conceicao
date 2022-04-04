@@ -1,9 +1,19 @@
+
+//Resposta número 1  , 10 , 5
+
+//resposta númerp 2   10, 10, 10 
+
+/*quantasHorasVoceEstudaPorDia
+quaisMateriasVoceEstuda
+você estuda ${t/p} por dia*/
+
 Resposta , 10 , 5
 
 10, 10, 10 
 
 "quantasHorasVoceEstudaPorDia"
 "quaisMateriasVoceEstuda"
+
 
  let nome
  let idade
@@ -13,8 +23,12 @@ Resposta , 10 , 5
       // console.log(typeof idade)
        //Deu Undefined porque não tem nenhum valor atribuido
       nome = prompt("Qual seu nome?")
+    idade = prompt("qual sua idade?")
+   console.log(typeof nome, typeof idade,)
+
   idade = prompt("qual sua idade?")
  console.log(typeof nome, typeof idade,)
+
  /*Os dois retornaram como String, porque o prompt só retorna desse jeito*/
 console.log("óla",nome, "Você tem", idade, "anos" )
 
@@ -35,4 +49,7 @@ c = a
 a = b
 b = c
 console.log(a,b)
-//Explicação criei uma variavel c seguindo a logica dos copo
+
+//Explicação criei uma variavel c seguindo a logica dos copos//
+
+//Explicação criei uma variavel c seguindo a logica dos copo//
