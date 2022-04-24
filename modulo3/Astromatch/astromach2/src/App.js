@@ -18,7 +18,7 @@ export default function App(){
   const escolherTela = ()=>{
     switch(telaAtual){
       case "inicial":
-        return <TelaInicial irParaTelaInicial={irParaTelaMatches} />
+        return <TelaInicial irParaTelaMatches={irParaTelaMatches} />
         case "matches":
           return <TelaMatches irParaTelaInicial={irParaTelaInicial} />
           default:

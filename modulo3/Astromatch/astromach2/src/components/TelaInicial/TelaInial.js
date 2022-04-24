@@ -1,112 +1,105 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import cancelar from "../../imagens/cancelar.png"
-import heart from "../../imagens/heart.png"
-import like from "../../imagens/like.png"
-import seta from "../../imagens/seta.png"
-// import { CardPai, CardFilho} from "./styled";
+import cancelar from "../../imagens/cancelar.png";
+import heart from "../../imagens/heart.png";
+import like from "../../imagens/like.png";
+import logoCerto from "../../imagens/logoCerto.png";
+import {
+  CardPai,
+  CardFilho,
+  ImagemCard,
+  Logo,
+  IconeMatch,
+  Main,
+  Botoes,
+  Descricao,
+  Bio,
+} from "./styled";
 
+export default function TelaInicial(props) {
+  const [perfil, setPerfil] = useState([]);
 
+  const getPerfil = () => {
+    axios
+      .get(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/yasmin-la/person`
+      )
+      .then((res) => {
+        setPerfil(res.data.profile);
+      })
+      .catch((err) => {
+        alert("Ocorreu um erro, tente novamente!");
+      });
+  };
 
+  const choosePerson = () => {
+    const body = {
+      id: perfil.id,
+      choice: true,
+    };
 
-export default  function TelaInicial(props){
-
-    const [perfil, setPerfil] =useState([])
-
-    const getPerfil = ()=>{
-        const header = {
-            headers:{}
+    axios
+      .post(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/yasmin-la/choose-person`,
+        body
+      )
+      .then((res) => {
+        if (res.data.isMatch) {
+          alert(`Você deu Match com ${perfil.name}!`);
+          getPerfil();
         }
+      })
+      .catch((err) => {
+        alert("Ocorreu um erro, Tente novamente!");
+      });
+  };
 
-        axios
-        .get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/yasmin-silva/person` , header)
-        .then((res)=>{
-            setPerfil(res.data.profile)
-        })
-        .catch((err)=>{
-            alert("Ocorreu um erro, tente novamente!")
-        })
-        
-    }
+  useEffect(() => {
+    getPerfil();
+  }, []);
 
-    const choosePerson = ()=>{
-        const header = {
-            headers:{'Content-Type': 'application/json'}
-        }
-        const body ={
-            id: perfil.id,
-            choice: true
-        }
+  return (
+    <CardPai>
+      <CardFilho>
+        <header>
+          <Logo src={logoCerto} alt="Logo" />
 
-        axios
-        .post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/yasmin-silva/choose-person` , body, header)
-        .then((res)=>{
-            if (res.data.isMatch){
-                alert(`Você deu Match com ${perfil.name}!`)
-                getPerfil()
-            }
-        })
-        .catch((err)=>{
-            alert("Ocorreu um erro, Tente novamente!")
-        })
-    }
+          <div onClick={props.irParaTelaMatches}>
+            <IconeMatch src={heart} alt="ícone ir para Matches" />
+          </div>
+        </header>
 
-    useEffect(()=>{
-        getPerfil()
-    },[])
+        <Main>
+          <ImagemCard src={perfil && perfil.photo} alt="Foto de perfil" />
+          <Descricao>
+            {perfil && perfil.name}, {perfil && perfil.age}{" "}
+          </Descricao>
+          <Bio>{perfil.bio}</Bio>
+        </Main>
 
-return(
-    <div>
-        <div>
+        <Botoes>
+          <div>
+            <div onClick={getPerfil}>
+              <img
+                src={cancelar}
+                alt="ícone de cancelar"
+                height={60}
+                width={60}
+              />
+            </div>
+          </div>
 
-    <div>
-        <button onClick={props.irParaTelaMatches}>
-            <img src={heart}  alt="ícone ir para Matches"/>
-        </button>
-    </div>
-
-       
-
-    <div>
-       
-       <img src={perfil.photo}  alt="Foto de perfil" height={300} width={200}/> 
-        
-    </div>
-        
-
-       <div>
-           
-        <div>
-        <p>{perfil.name} {perfil.age} anos</p> 
-        </div>
-
-        <div>
-        <p>{perfil.bio}</p>  
-        </div>
-        
-      </div>
-
-
-   <div>
-      <button onClick={getPerfil}>
-       <img src={cancelar} alt="ícone de cancelar" height={300} width={200} />
-      </button>
-   </div>
-
-   <div>
-      <button onClick={()=> {choosePerson()}}>
-       <img src={like} alt="ícone de Match" height={300} width={200} />
-      </button>
-   </div>
-
-   
-    
-      
-              
-       
-        
-        
-    </div>
-    </div>
-)
+          <div>
+            <div
+              onClick={() => {
+                choosePerson();
+              }}
+            >
+              <img src={like} alt="ícone de Match" height={60} width={60} />
+            </div>
+          </div>
+        </Botoes>
+      </CardFilho>
+    </CardPai>
+  );
 }
