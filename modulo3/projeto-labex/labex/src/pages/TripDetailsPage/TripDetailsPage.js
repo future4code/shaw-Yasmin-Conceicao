@@ -2,7 +2,10 @@
 
 
 export default function TripDetailsPage(){
-    <div>
+    return(
+      <div>
         <h1>Eu sou o  TripDetailsPage</h1>
-    </div>
+    </div>  
+    )
+    
 }

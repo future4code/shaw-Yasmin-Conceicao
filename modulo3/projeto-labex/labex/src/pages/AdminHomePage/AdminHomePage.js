@@ -3,7 +3,11 @@
 import React from "react";
 
 export default function AdminHomePage(){
-    <div>
+
+    return(
+     <div>
         <h1>Eu sou o AdminHomePage</h1>
-    </div>
+    </div>   
+    )
+    
 }

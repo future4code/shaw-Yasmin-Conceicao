@@ -1,45 +1,37 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AdminHomePage from "../components/AdminHomePage";
-import ApplicationFormPage from "../components/ApplicationFormPage";
-import CreateTripPage from "../components/CreateTripPage";
-import HomePage from "../components/HomePage";
-import ListTripsPage from "../components/ListTripsPage";
-import LoginPage from "../components/LoginPage";
-import TripDetailsPage from "../components/TripDetailsPage";
+import AdminHomePage from "../pages/AdminHomePage/AdminHomePage"
+import ApplicationFormPage from "../pages/ApplicationFormPage/ApplicationFormPage";
+import CreateTripPage from "../pages/CreateTripPage/CreateTripPage";
+import HomePage from "../pages/HomePage/HomePage";
+import ListTripsPage from "../pages/ListTripsPage/ListTripsPage";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import TripDetailsPage from "../pages/TripDetailsPage/TripDetailsPage";
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
 
-        <Route 
-            exact path={"/"}>
-           <HomePage />
-        </Route>
+        <Route  index element={<HomePage />}/>
 
-        <Route 
-            exact path={"/trips/list"}>
-            <ListTripsPage />
-        </Route>
+        <Route  path="/trips/list" element={ <ListTripsPage />}/>
 
-        <Route 
-            exact path={"/login"}>
-            <LoginPage />
-        </Route>
+        <Route  path="/trips/application" element={ <ApplicationFormPage/>}/>
 
-        <Route 
-            exact path={"/admin/trips/list"}>
-            <AdminHomePage />
-        </Route>
+        <Route  path="/login" element={  <LoginPage />}/>
 
-        <Route 
-            exact path={"/admin/trips/:id"}>
-            <TripDetailsPage/>
-        </Route>
+        <Route  path="/admin/trips/create" element={< CreateTripPage /> }/>
+
+        <Route  path="/admin/trips/list" element={<AdminHomePage /> }/>
+
+        <Route  path="/admin/trips/:id" element={<TripDetailsPage/> }/>
 
         
       </Routes>
     </BrowserRouter>
-  );
+
+        
+     
+  )
 }

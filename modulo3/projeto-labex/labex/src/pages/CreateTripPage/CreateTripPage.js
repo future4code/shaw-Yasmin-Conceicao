@@ -3,7 +3,11 @@
 import React from "react";
 
 export default function CreateTripPage(){
+    return(
     <div>
         <h1>Eu sou o  CreateTripPage</h1>
     </div>
+
+    )
+   
 }

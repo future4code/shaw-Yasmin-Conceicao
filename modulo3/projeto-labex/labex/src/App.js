@@ -1,10 +1,16 @@
 import React from "react";
-import Router from "./Router/Router"
+import Router from "./Router/Router";
+
 
 export default function App(){
   return(
-    <div>
+   <div>
      <Router/>
-    </div>
+   </div>
   )
+
+
+
+   
+  
 }
