@@ -10,13 +10,20 @@ export default function HomePage(){
         navigate("/trips/list")
     }
 
+    const goToAdmin = () =>{
+        navigate("/login")
+    }
+
     return(
         <div>
             <h1>Eu sou o HomePage</h1>
 
-            <iframe src="https://giphy.com/embed/xT0GqG6ueZcOJqjkfC" width="480" height="251" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nasa-space-90-million-miles-away-xT0GqG6ueZcOJqjkfC">via GIPHY</a></p>
+            <iframe src="https://giphy.com/embed/xT0GqG6ueZcOJqjkfC" width="480" height="251" frameBorder="0"  allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nasa-space-90-million-miles-away-xT0GqG6ueZcOJqjkfC">via GIPHY</a></p>
 
             <button onClick={goToListTripsPage}>Lista viagens</button>
+
+            <button onClick={goToAdmin}>Área de Admin</button>
+
         </div>
     )
 }
