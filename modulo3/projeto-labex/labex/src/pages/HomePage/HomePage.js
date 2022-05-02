@@ -1,29 +1,40 @@
 //Para o usuario escolher entre Área administrativa e lista de viagens
 
+import { Typography } from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@mui/material"
+import { ContainerButton } from "./styled";
 
 export default function HomePage(){
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const goToListTripsPage = () =>{
-        navigate("/trips/list")
-    }
+    // const goToListTripsPage = () =>{
+    //     navigate("/trips/list")
+    // }
 
-    const goToAdmin = () =>{
-        navigate("/login")
-    }
+    // const goToAdmin = () =>{
+    //     navigate("/login")
+    // }
 
     return(
         <div>
-            <h1>Eu sou o HomePage</h1>
+            <Typography variant="h1" align={'center'} gutterBottom>Home</Typography>
 
-            <iframe src="https://giphy.com/embed/xT0GqG6ueZcOJqjkfC" width="480" height="251" frameBorder="0"  allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nasa-space-90-million-miles-away-xT0GqG6ueZcOJqjkfC">via GIPHY</a></p>
+           
+        <ContainerButton>
 
-            <button onClick={goToListTripsPage}>Lista viagens</button>
+            <Link to={'/trips/list'}>
+            <Button variant={'outlined'} color={'secondary'} >Lista viagens</Button>
+            </Link>
 
-            <button onClick={goToAdmin}>Área de Admin</button>
-
+            <Link to={'/login'}>
+            <Button variant={'contained'} color={'primary'}  >Área do Administardor</Button>
+            </Link>
+            
+            
+        </ContainerButton>
+            
         </div>
     )
 }

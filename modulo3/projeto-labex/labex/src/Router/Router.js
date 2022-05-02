@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminHomePage from "../pages/AdminHomePage/AdminHomePage"
@@ -8,9 +9,17 @@ import ListTripsPage from "../pages/ListTripsPage/ListTripsPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import TripDetailsPage from "../pages/TripDetailsPage/TripDetailsPage";
 
+const GlobalContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 16px;
+`
+
 export default function Router() {
   return (
     <BrowserRouter>
+    <GlobalContainer>
       <Routes>
 
         <Route  index element={<HomePage />}/>
@@ -27,8 +36,8 @@ export default function Router() {
 
         <Route  path="/admin/trips/:id" element={<TripDetailsPage/> }/>
 
-        
       </Routes>
+       </GlobalContainer>
     </BrowserRouter>
 
         
