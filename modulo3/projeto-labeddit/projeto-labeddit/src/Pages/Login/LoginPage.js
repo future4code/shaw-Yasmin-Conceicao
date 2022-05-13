@@ -1,9 +1,11 @@
+import { Button, Container,  TextField, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {BASE_URL} from "../../contants/Baseurl"
 import { useForm } from "../../hooks/useForm";
-
+import { CardButton, CardInput, CardLogo, Logo } from "./styled";
+import vetor from "../../img/vetor.png"
 
 export default function LoginPage () {
   const navigate = useNavigate()
@@ -35,16 +37,41 @@ export default function LoginPage () {
 
   return(
    <div>
-    <h1>LoginPage</h1>
+     <Container>
 
-    <input placeholder="Nome" value={form.email} name="email"  onChange={onChange} />
+     
+     
+     <CardLogo>
+        <Logo src={vetor}/>
+     </CardLogo>
+    
 
-    <input type="password" placeholder="Senha" name="senha" value={form.senha}  onChange={onChange}/>
+    <Typography variant="h4" align="center" marginBottom={"20px"}>LabEddite</Typography>
 
-    <button onClick={() => {Login()}}>Continuar</button>
+    <CardInput>
 
-    <button onClick={() => {navigate("/cadastro")}}>Crie uma conta</button>
+    <TextField id="outlined-basic" label="Nome" variant="outlined" value={form.email} name="email"  onChange={onChange} />
 
+    <TextField 
+     id="outlined-basic"
+     label="Senha" variant="outlined"
+     value={form.senha}
+     name="senha"
+     onChange={onChange} 
+     type="password"
+     autoComplete="current-password" />
+     
+    </CardInput>
+    
+    <CardButton>
+      
+      <Button variant="contained" color="primary" sx={{borderRadius: "200px", width: "270px", marginLeft:"19px", height:"45px", backgroundImage: "linear-gradient(180deg, #7fdeff, #eabaf6)", color:"black"}} onClick={() => {Login()}}>Continuar</Button>
+
+      <Button variant="outlined" color="secondary"  sx={{borderRadius: "200px", width: "270px", marginLeft:"19px", height:"45px"}} onClick={() => {navigate("/cadastro")}}>Crie uma conta</Button>
+
+    </CardButton>
+   
+    </Container>
    </div>
   )
 }
