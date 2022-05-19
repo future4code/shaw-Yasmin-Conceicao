@@ -1,10 +1,19 @@
 import React from "react";
 import axios from "axios";
+import styled from "styled-components"
 
 
-
-
+const Box = styled.div`
+ display:flex;
+ justify-content: space-around;
   
+`
+
+ 
+
+
+
+
 
 
 const headers = {
@@ -99,7 +108,7 @@ export default class App extends React.Component {
       <div>
         {
           this.state.renderizaPagina ?
-          <div>
+          <Box>
             <button onClick={this.voltarParaPaginaInicial}>Ver lista</button>
           <label>
             Nome:
@@ -110,12 +119,12 @@ export default class App extends React.Component {
             Email:
             <input value={this.state.email} onChange={this.onChangeEmail} />
           </label>
-          <button onClick={this.postcreateUser}>enviar</button>
-        </div>
+          <button onClick={this.postcreateUser}>Cadastrar</button>
+        </Box>
         :
         
         <div>
-          <button onClick={this.voltarParaPaginaInicial}>pagina inicial</button>
+          <button onClick={this.voltarParaPaginaInicial}>Página inicial</button>
           <ul>{componentsUsers}</ul>
         </div>
         }
