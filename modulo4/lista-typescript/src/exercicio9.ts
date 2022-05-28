@@ -7,4 +7,4 @@ function factorial (palavra: string): void {
     console.log(resultado);
 }
 
-factorial("resultado")
+factorial("yasmin")

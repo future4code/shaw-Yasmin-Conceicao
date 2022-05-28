@@ -1,32 +1,71 @@
-type account ={
+type account = {
     name:string,
-    email:string,
-    role:ROLE
+    email: string,
+    role: Role
 }
 
-enum ROLE {
+enum Role  {
     ADMIN = "admin",
     USER = "user"
+
 }
 
+
 const users:account[] = [
-    {name: "Rogério", email: "roger@email.com", role: ROLE.USER},
-	{name: "Ademir", email: "ademir@email.com", role: ROLE.ADMIN},
-	{name: "Aline", email: "aline@email.com", role: ROLE.USER},
-	{name: "Jéssica", email: "jessica@email.com", role: ROLE.USER},  
-	{name: "Adilson", email: "adilson@email.com", role: ROLE.USER},  
-	{name: "Carina", email: "carina@email.com", role: ROLE.ADMIN} 
+    {name: "Rogério", email: "roger@email.com", role: Role.ADMIN},
+	{name: "Ademir", email: "ademir@email.com", role: Role.ADMIN},
+	{name: "Aline", email: "aline@email.com", role: Role.USER},
+	{name: "Jéssica", email: "jessica@email.com", role: Role.USER},  
+	{name: "Adilson", email: "adilson@email.com", role: Role.USER},  
+	{name: "Carina", email: "carina@email.com", role: Role.ADMIN} 
 
 ]
 
-function takeAccount () {
-    users.filter((user) =>{
-        if(user.role === ROLE.ADMIN){
-            const list = [user]
-            console.table(list)
-        }
-    })
+const filtraAlgo = () => { 
+ users.filter((user) =>{
+     if(user.role === Role.ADMIN){
+         const list = [user.email]
+         console.table(list)
+     }
+ })
 }
 
-takeAccount()
+filtraAlgo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

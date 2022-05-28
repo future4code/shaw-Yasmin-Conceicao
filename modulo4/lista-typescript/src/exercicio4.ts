@@ -1,3 +1,8 @@
+enum SECTOR {
+    MARKETING = "marketing",
+    SALES = "vendas",
+    FINANCe = "finamceiro"
+}
 type employee = {
     name:string,
     salary:number,
@@ -5,11 +10,6 @@ type employee = {
     homeOffice: boolean
 }
 
-enum SECTOR {
-    MARKETING = "marketing",
-    SALES = "vendas",
-    FINANCe = "finamceiro"
-}
 
 const employees: employee[] = [
     { name: "Marcos", salary: 2500, sector:SECTOR.MARKETING, homeOffice: true },
@@ -24,7 +24,7 @@ const employees: employee[] = [
 
 function selecteEmployee () {
     employees.filter((employee) =>{
-        if(employee.sector === SECTOR.MARKETING && employee.homeOffice === true){
+        if(employee.sector === SECTOR.MARKETING && employee.homeOffice === false){
             const list = [employee]
             console.table(list)
         }

@@ -29,7 +29,7 @@ function usersInDebt (contas:Array<Account>):Account[] {
 
    const filtraNegativos = contasAtualizadas.filter(item => item.totalBalance < 0)
 
-   return contasAtualizadas
+   return filtraNegativos
 }
 
 console.table(usersInDebt(bank))
