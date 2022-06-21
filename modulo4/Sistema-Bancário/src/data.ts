@@ -9,7 +9,7 @@ export type Extract = {
 export type user = {
    name: string,
    cpf: number,
-   birthDate:Date,
+   birthDate:Date || string ,
    balance:Number,
    extract: []
 }

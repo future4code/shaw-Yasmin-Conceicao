@@ -200,7 +200,7 @@ export default function Feed () {
       </CardContent>
       <CardActions>
         
-        <Button  sx={{ color: posts.userVote === 1 ? "#32CD32" : "#1E90FF"}} onClick={()=> botaoLike(posts.userVote,posts.id)} size="small"><ThumbUpOutlinedIcon /></Button>
+        <Button sx={{ color: posts.userVote === 1 ? "#32CD32" : "#1E90FF"}} onClick={()=> botaoLike(posts.userVote,posts.id)} size="small"><ThumbUpOutlinedIcon /></Button>
         <Typography>{posts.voteSum}</Typography>
         <Button  sx={{ color: posts.userVote == -1 ? "#B22222" : "#1E90FF"}}  onClick={()=> botaoDeslike(posts.userVote,posts.id)} size="small"><ThumbDownAltOutlinedIcon/></Button>
             {post.userVote && "null"}
