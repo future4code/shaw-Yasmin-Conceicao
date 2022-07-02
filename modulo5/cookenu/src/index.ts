@@ -1,4 +1,9 @@
 import app from "./app"
+import { CreateRecipe } from "./endpoints/CreateRecipe"
+import { GetAllRecipe } from "./endpoints/GetAllRecipes"
+import { GetProfile } from "./endpoints/GetProfile"
+import { GetProfileById } from "./endpoints/GetProfileById"
+import { GetRecipe } from "./endpoints/GetRecipe"
 import { Login } from "./endpoints/Login"
 import { Signup } from "./endpoints/Signup"
 
@@ -14,4 +19,32 @@ app.post("/signup" , Signup)
 app.post("/login", Login )
 
 
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTY2MjI1MjIsImV4cCI6MTY1NjYyNjEyMn0.0wDhfZXv5vUZUj9ytG6TEU4xG0PaqiV0b7XhHAM3PdI
+//--------------------------------------------------------------------GetProfile-------------------------------------------------------------------------------------------------
+
+
+app.get("/user/profile", GetProfile)
+
+
+//--------------------------------------------------------------------GetProfileById-------------------------------------------------------------------------------------------------
+
+
+app.get("/user/:id", GetProfileById)
+
+
+
+//--------------------------------------------------------------------CreateRecipe-------------------------------------------------------------------------------------------------
+
+app.post("/recipe", CreateRecipe)
+
+
+//--------------------------------------------------------------------GetRecipe-------------------------------------------------------------------------------------------------
+
+
+app.get("/recipe/:id", GetRecipe)
+
+
+
+//--------------------------------------------------------------------GetAllRecipes------------------------------------------------------------------------------------------------
+
+
+app.get("/GetAllRecipes", GetAllRecipe)
