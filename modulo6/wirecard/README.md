@@ -1,6 +1,6 @@
 # 💰 Case wirecard
 
-<h4> Projeto desenvolvido individualmente seguindo os requesitos pedidos no desafio da wirecard, contendo endpoints de cadastro, login, registro de cartão de créito, pagamento via boleto, pagamento via cartão de crédito e vizualização de pagamentos anteriores. </h4>
+<h4> Projeto desenvolvido individualmente seguindo os requesitos pedidos no desafio da wirecard, contendo endpoints de cadastro, login, registro de cartão de crédito, pagamento via boleto, pagamento via cartão crédito e vizualização de pagamentos anteriores. </h4>
 
 <br/>
 
@@ -53,7 +53,7 @@ Para efetuar um pagamento via cartão de crédito é necessário estar logado e 
 
 ### Informações de pagamentos realizados
 
-Para ter acesso as informações de pagamento anteriores é preciso estar logado, ou seja, passar no header da requisição o token de acesso. Ao fazer a busca é retornado as informações de tipo de pagamento se foi cartão ou boleto, valor que foi pago, situação do pagamento se está "Paid" ou "Waiting Payment".
+Para ter acesso as informações de pagamento anteriores é preciso estar logado, ou seja, passar no header da requisição o token de acesso. Ao fazer a busca é retornado as informações de id do pagamento, tipo de pagamento se foi cartão ou boleto, caso seja boleto o "id_ticket" vira com o número correspondente ao "cógido de barras", ou se for pagamento via cartão de crédito virá o número do cartão. É retornado a situação de pagamento se está "Paid" ou "waiting Payment" e o id do usuário que fez o pagamento.
 
 #
 
