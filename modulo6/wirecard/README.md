@@ -16,6 +16,8 @@ https://documenter.getpostman.com/view/20353490/UzXVtDwN
 * Mysql
 * Poo
 * Uuid
+* Jwt
+* Bcryptjs
 
 <br/>
 
