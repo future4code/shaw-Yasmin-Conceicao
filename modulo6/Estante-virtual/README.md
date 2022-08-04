@@ -6,7 +6,7 @@
 
 ## 📌 Link do Heroku
 
-https://estante-virtual01.herokuapp.com/
+https://documenter.getpostman.com/view/20353490/VUjLJmYi
 
 <br/>
 
