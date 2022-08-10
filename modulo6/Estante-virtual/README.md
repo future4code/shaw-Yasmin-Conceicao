@@ -4,6 +4,12 @@
 
 <br/>
 
+## 🔗 Link do desafio 
+
+https://github.com/estantevirtual/teste_ev
+
+<br/>
+
 ## 📌 Link do Heroku
 
 https://documenter.getpostman.com/view/20353490/VUjLJmYi
@@ -70,7 +76,7 @@ e competition são as informações das competições existentes como "Natação
 
 #
 
-### Funcionalidade extras
+### 🧿 Funcionalidades extras
 
 * Sistema de autenticação com jwt
 * Criptografia de senha com sistema de Hash
