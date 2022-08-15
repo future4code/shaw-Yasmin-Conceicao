@@ -4,9 +4,26 @@
 
 <br/>
 
+## 🔗 Link do desafio
+
+https://github.com/wirecardBrasil/challenge/tree/master/backend
+
+<br/>
+
 ## 📌 Link do Heroku
 
 https://documenter.getpostman.com/view/20353490/UzXVtDwN
+
+<br/>  
+
+## 🔰 Requisitos e funcinalidades pedidas
+
+* The API needs to accept two payment methods: Credit Card and Boleto.
+* When the payment method is boleto, we only need to return the boleto's number in our response.
+* When the method is card, we need to return if it was successful or not (please don't worry about processing the payment, just mock the answers).
+* The API must receive the information of the buyer, customer and payment.
+* The API needs to return all the information about the payment, as well as the status of that payment.
+* Unit tests are required
 
 <br/>
 
@@ -59,7 +76,7 @@ Para ter acesso as informações de pagamento anteriores é preciso estar logado
 
 #
 
-### Funcionalidade extras
+### 💎 Funcionalidades extras
 
 * Sistema de autenticação com jwt
 * Criptografia de senha com sistema de Hash
