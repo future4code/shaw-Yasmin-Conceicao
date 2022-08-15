@@ -4,9 +4,9 @@
 
 <br/>
 
-## 🔗  Link do desafio
+## 🔗 Link do desafio
 
-https://github.com/amaroteam/back-end-challenge
+ https://github.com/amaroteam/back-end-challenge
 
 <br/>
 
@@ -64,7 +64,7 @@ uma mensage de sucesso seguido do token do usuário.
   
   #
   
-  ### Funcionalidade extras
+  ### 🧿 Funcionalidades extras
 
  * Sistema de autenticação com jwt
  * Criptografia de senha com sistema de Hash
